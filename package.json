@@ -1,0 +1,15 @@
+{
+  "name": "sheetstojson",
+  "version": "1.0.0",
+  "description": "Google Sheets scync To JSON Format",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Saranjith p",
+  "license": "ISC",
+  "dependencies": {
+    "googleapis": "^105.0.0"
+  }
+}
