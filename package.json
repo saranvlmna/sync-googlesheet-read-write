@@ -11,5 +11,19 @@
   "license": "ISC",
   "dependencies": {
     "googleapis": "^105.0.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saranvlmna/syncGoogleSheetToJson.git"
+  },
+  "keywords": [
+    "googleapis",
+    "googlesheets",
+    "syncgooglesheets"
+  ],
+  "bugs": {
+    "url": "https://github.com/saranvlmna/syncGoogleSheetToJson/issues"
+  },
+  "homepage": "https://github.com/saranvlmna/syncGoogleSheetToJson#readme"
 }
