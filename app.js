@@ -4,7 +4,7 @@ const { google } = require('googleapis');
 const app = express();
 
 const TOKEN_PATH = './key-files/token.json';
-const SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly'];
+const SCOPES = ['https://www.googleapis.com/auth/spreadsheets'];
 
 auth = () => {
     const credentials = require('./key-files/credentials.json');
