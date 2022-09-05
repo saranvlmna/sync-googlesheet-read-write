@@ -63,6 +63,38 @@ listSheetData = (auth) => {
     });
 }
 
+WriteToSheet = async (writeData) => {
+    const auth = ""
+    const sheets = google.sheets({ version: 'v4', auth });
+    const sheetId = '1CiTuTDgMPZGXRNwuZFVdoWQ0kahmnIV0F5_Fkfr5FsQ'
+    const range = 'Sheet1!A2:B1000'
+
+    const request = {
+        'spreadsheetId': sheetId,
+        resource: {
+            'ranges': range
+        },
+        auth: auth,
+    };
+
+    sheets.spreadsheets.values.batchClear(request, function (err, response) {
+        if (!err)
+            if (response) {
+                var data = [
+                    {
+                        range: range,
+                        values: writeData
+                    }]
+                var resource = {
+                    spreadsheetId: sheetId,
+                    auth: auth,
+                    resource: { data: data, valueInputOption: "USER_ENTERED" }
+                };
+                sheets.spreadsheets.values.batchUpdate(resource)
+            }
+    })
+}
+
 convertToJSON = (array) => {
     var first = array[0].join()
     var headers = first.split(',');
